@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Maciej Binczarowski</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container flex">
+            <h1 class="logo"><a href="#home">Binczar</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Showcase -->
+    <section id="home" class="showcase">
+        <div class="container grid">
+            <article class="showcase-text">
+                <h1>Hi, I'm Maciej Binczarowski</h1>
+                <p>Embedded developer & Computer Science student</p>
+                <a href="#projects" class="btn btn-outline">View Projects</a>
+            </article>
+            <img src="images/maciej-binczarowski.jpg" alt="Maciej Binczarowski" class="showcase-img">
+        </div>
+    </section>
+
+    <div class="social-wrapper">
+        <div class="social-container">
+            <a href="#" class="social-btn github">
+                <img src="images/fontawesome/svgs/brands/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/maciej-binczarowski/" target="_blank" class="social-btn linkedin">
+                <img src="images/fontawesome/svgs/brands/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="mailto:maciej.binczarowski@gmail.com" class="social-btn mail">
+                <img src="images/fontawesome/svgs/solid/envelope.svg" alt="Mail">
+            </a>
+            <a href="https://wa.me/+48725131037" target="_blank" class="social-btn coffee">
+                <img src="images/fontawesome/svgs/brands/square-whatsapp.svg" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <div class="container grid">
+            <!-- Kolumna 1: Informacje o mnie -->
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I'm a Computer Science student at Wrocław University of Technology with a strong passion for software development, system architecture, and embedded systems. My main focus is front-end development with React, but I also work with C and low-level programming.</p>
+                <p>I am currently developing my own operating system and real-time system (RTOS) as part of my engineering thesis. Additionally, I have experience in compiler construction and work with hardware-related technologies.</p>
+            </div>
+
+            <!-- Kolumna 2: Dodatkowa działalność -->
+            <div class="additional-activity">
+                <h2>Additional Activity</h2>
+                <p>I am an active member of the <strong><a href="https://pwrinspace.pwr.edu.pl/">PWr in Space</a></strong> scientific club, where I work on software development for space-related projects. This includes programming embedded systems, optimizing algorithms, and contributing to real-world applications in aerospace engineering.</p>
+                <p>As part of my involvement, I am currently working with several people on developing a missile tracking system using an autonomously controlled antenna.</p>
+            </div>
+
+            <!-- Kolumna 3: Zdjęcie po prawej stronie -->
+            <div class="about-image">
+                <img src="images/pwrinspace-photo.png" alt="Maciej Binczarowski">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projekty -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="grid">
+
+                <a href="#project-dialog-1">
+                    <article class="project card">
+                        <h3>Own allocator</h3>
+                        <p>A custom memory allocator written in C. It works simillar to malloc and also collect statistics.</p>
+                        <p>Technologies: C, Makefile</p>
+                    </article>
+                </a>
+
+                <a href="#project-dialog-2">
+                    <article class="project card">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal website.</p>
+                    </article>
+                </a>
+
+                <a href="#project-dialog-3">
+                    <article class="project card">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal website.</p>
+                    </article>
+                </a>
+
+                <a href="#project-dialog-4">
+                    <article class="project card">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive personal website.</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dialogi -->
+    <dialog id="project-dialog-1">
+        <h2>Own allocator</h2>
+        <p>A custom memory allocator written in C. It works similar to malloc and also collects statistics.</p>
+        <a href="https://github.com/MaciejBinczarowski/allocator" target="_blank">GitHub Repository</a>
+        <p>Example of use:</p>
+        <article class="code"><pre><code>#include &lt;stdio.h&gt;
+#include "allocator.h"
+
+int main() {
+    // Initialize the allocator (if necessary)
+    initAllocator();
+
+    // Allocate memory
+    int* ptr1 = alloc(sizeof(int));
+    *ptr1 = 8;
+
+    char* ptr2 = alloc(10 * sizeof(char));
+    strcpy(ptr2, "Hello!");
+    
+    // Print memory dump
+    printBlockList();
+    
+    // Deallocate memory
+    dealloc(ptr1);
+    dealloc(ptr2);
+
+    return 0;
+}</code></pre></article>
+        <a href="#projects">Close</a>
+    </dialog>
+    
+
+    <dialog id="project-dialog-2">
+        <h2>Portfolio Website</h2>
+        <p>Responsive portfolio with HTML and CSS.</p>
+        <a href="#projects">Close</a>
+    </dialog>
+
+    <dialog id="project-dialog-3">
+        <h2>Portfolio Website</h2>
+        <p>Responsive portfolio with HTML and CSS.</p>
+        <a href="#projects">Close</a>
+    </dialog>
+
+    <dialog id="project-dialog-4">
+        <h2>Portfolio Website</h2>
+        <p>Responsive portfolio with HTML and CSS.</p>
+        <a href="#projects">Close</a>
+    </dialog>
+
+    <dialog id="project-dialog-5">
+        <h2>Portfolio Website</h2>
+        <p>Responsive portfolio with HTML and CSS.</p>
+        <a href="#projects">Close</a>
+    </dialog>
+
+    <dialog id="project-dialog-6">
+        <h2>Portfolio Website</h2>
+        <p>Responsive portfolio with HTML and CSS.</p>
+        <a href="#projects">Close</a>
+    </dialog>
+
+    <!-- Interests -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2>My Interests</h2>
+            <div class="grid interests-grid">
+                <article class="interest-card">
+                    <img src="images/Projekt bez nazwy (2).png" alt="Mountains">
+                    <h3>Mountains</h3>
+                    <p>I love hiking in the mountains and exploring new trails.</p>
+                </article>
+                <article class="interest-card">
+                    <img src="images/running.jpeg" alt="Running">
+                    <h3>Running</h3>
+                    <p>Running is my passion, helping me stay fit and focused.</p>
+                </article>
+                <article class="interest-card">
+                    <img src="images/maciej-binczarowski.jpg" alt="Psychology">
+                    <h3>Psychology</h3>
+                    <p>I am fascinated by human behavior and cognitive processes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <div class="contact-links">
+                    <p>Feel free to contact me if you have any questions or would like to work together.</p>
+                    <a href="https://www.linkedin.com/in/maciej-binczarowski/" target="_blank">LinkedIn Profile</a>
+                    <a href="mailto:maciej.binczarowski@gmail.com?subject=Collaboration offer&body=Hi, we are impressed with your portfolio and would like to meet with you for an interview.">Email: maciej.binczarowski@gmail.com</a>
+                    <p>Phone: +48 725 131 037</p>
+                </div>
+                <div class="contact-image">
+                    <img src="images/handshake.jpg" alt="Handshake">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Maciej Binczarowski</p>
+        </div>
+    </footer>
+</body>
+</html>
