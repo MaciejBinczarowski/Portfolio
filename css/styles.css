@@ -322,6 +322,7 @@ footer p {
 dialog {
     display: none;
     position: fixed;
+    z-index: 9999999;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -343,6 +344,8 @@ dialog:target {
     background-color: #f4f4f4;
     padding: 5px;
     border-radius: 5px;
+
+    text-wrap: auto;
 }
 
 dialog a {
@@ -482,6 +485,10 @@ dialog a {
     .navbar ul {
         align-items: flex-start;
         font-size: small;
+    }
+
+    .container.flex { 
+        padding-right: 0;
     }
 
     .logo {
