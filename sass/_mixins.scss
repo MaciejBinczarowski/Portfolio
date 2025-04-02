@@ -1,0 +1,34 @@
+@mixin font-setup(
+    $family: $font-family,
+    $size: $base-font-size,
+    $lineHeight: $base-line-height,
+    $color: $base-color
+  ) {
+    font-family: $family;
+    font-size: $size;
+    line-height: $lineHeight;
+    color: $color;
+  }
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // A responsive mixin using conditionals to output media queries
+  @mixin respond-to($size) {
+    @if $size == 'phone' {
+      @media (max-width: 600px) {
+        @content;
+      }
+    } @else if $size == 'medium' {
+      @media (max-width: 768px) {
+        @content;
+      }
+    } @else if $size == 'tablet' {
+      @media (max-width: 992px) {
+        @content;
+      }
+    }
+  }
